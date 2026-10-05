@@ -1,0 +1,108 @@
+ESCUELA COLOMBIANA DE INGENIERIA
+DESARROLLO ORIENTADO POR OBJETOS
+PROYECTO INICIAL 2026-2 - SLOT MACHINE
+RETROSPECTIVA (ciclos 1 a 4)
+ 
+Autores: Juan David Castellanos - Nicole Paez
+ 
+
+A. ESTADO DEL PROYECTO POR MINI-CICLOS
+
+ 
+CICLO 1 - Modelo basico  
+  Entregado: crear la maquina, agregar y eliminar ruedas y simbolos, colocar
+  simbolos, girar, consultar (symbols, configuration, distinctSymbols, isJackpot),
+  hacer visible/invisible y salir.
+  Estado: TERMINADO.
+ 
+CICLO 2 - Operaciones sobre las ruedas
+  Mini-ciclo 5: intercambiar ruedas (swap)
+  Mini-ciclo 6: fijar y soltar una rueda (lock / unlock) 
+  Mini-ciclo 7: rotar una rueda n pasos (spin(rueda, pasos))
+  Mini-ciclo 8: dejar una configuracion dada (spin(String[])) 
+CICLO 3 - Maraton
+  Mini-ciclo: constructor SlotMachine(n) y SlotMachineContest1 con
+  solve(n) y simulate(n)
+  Pruebas: SlotMachineContest1Test.
+ 
+CICLO 4 - Refactoring y extension
+  Mini-ciclo 0: revisar y corregir problemas del ciclo 3 
+  Mini-ciclo 1: jerarquia de simbolos y addSymbol(tipo, pos, color):
+      Symbol (normal), EphemeralSymbol, ShySymbol 
+  Mini-ciclo 2: jerarquia de ruedas y addWheel(tipo, pos):
+      Wheel (normal), LeftyWheel, RebelWheel 
+  Mini-ciclo 3: tipo nuevo propuesto por nosotros
+      SleepyWheel (gira, descansa, gira...)
+  Mini-ciclo 4: diferenciacion visual (req. de usabilidad):
+      - ruedas: franja de color (lefty cian, rebel amarilla, sleepy roja)
+      - simbolos: forma (normal = circulo, ephemeral = triangulo que se
+        encoge, shy = cuadrado que aparece y desaparece)
+  Mini-ciclo 5: clase SlotMachineException con los mensajes como constantes,
+      que reemplaza a showError 
+  Mini-ciclo 6: pruebas y entrega
+      - SlotMachineC4Test (pruebas de unidad del ciclo 4) 
+      - SlotMachineCC4Test (minimo dos pruebas compartidas) 
+      - Pruebas de unidad convertidas al estilo con excepciones 
+      - Dos pruebas de aceptacion (SlotMachineContest1.acceptanceTest1 y
+        acceptanceTest2) 
+      - Diseno en astah actualizado con los tipos nuevos 
+      - Retrospectiva 
+
+ 
+1. Tiempo invertido por cada integrante (horas)
+ 
+   Integrante                 Ciclo 1   Ciclo 2   Ciclo 3   Ciclo 4
+   Juan David Castellanos     10         12         15        13
+   Nicole Paez                10         12         15        13
+ 
+2. Estado actual del proyecto y por que
+ 
+   El proyecto cumple los requisitos funcionales 16 a 19 del ciclo 4:
+   hay cuatro tipos de rueda (normal, lefty, rebel), tres tipos de simbolo
+   (normal, ephemeral, shy) y un tipo nuevo propuesto (SleepyWheel). Los tipos
+   se pueden distinguir a simple vista. 
+ 
+3. Mayor logro de este ciclo y por que
+ 
+   Lograr la extensibilidad sin romper lo que ya funcionaba. Wheel y Symbol
+   quedaron como clases base con "ganchos" (canLock, canSwap, canDelete,
+   wantsToSpin, chooseSymbol, onSelected, onSpin, getSize, isShown, getShape).
+   SlotMachine solo le pregunta a la rueda o al simbolo lo que puede hacer,
+   asi que ya no pregunta de que tipo es. Agregar un tipo nuevo es crear una
+   subclase y una linea en el metodo newWheel o newSymbol. Los metodos
+   addWheel(pos) y addSymbol(pos, color) del ciclo 3 siguen funcionando porque
+   ahora delegan en los nuevos con el tipo "normal".
+ 
+4. Mayor problema tecnico y que hicimos para resolverlo
+ 
+ 
+   Cuando se encoge el simbolo efimero. Decidimos que se encoge en cada
+      giro (onSpin) y que el simbolo timido alterna cuando es seleccionado
+      (onSelected). SlotMachine avisa a los simbolos con los metodos privados
+      afterSpin y select.
+  Excepciones. Al reemplazar showError por SlotMachineException, todos los
+      metodos publicos que pueden fallar pasaron a declarar throws. Los metodos
+      de consulta isJackpot y distinctSymbols no podian lanzar excepcion por un
+      catalogo vacio, asi que separamos configuration() (que valida y lanza)
+      del metodo privado currentColors() (que solo arma el arreglo). El
+      atributo ok() se conserva: se pone en false antes de cada throw.
+ 
+5. Que hicimos bien como equipo y a que nos comprometemos para mejorar
+ 
+   Bien:  avanzar por pasos pequeños, un tipo a la
+   vez, y probar antes de seguir
+   Mejorar: empezar la retrospectiva y las pruebas
+   desde la mitad del ciclo y no al final
+ 
+6. Practica XP mas util
+ 
+   Refactoring con pruebas de unidad: pudimos reorganizar Wheel y Symbol en
+   jerarquias porque las pruebas del ciclo 3 avisaban si algo se rompia.
+   Tambien ayudo trabajar por mini-ciclos: cada tipo de rueda y de simbolo
+   se hizo y se probo por separado. 
+ 
+7. Referencias utilizadas y cual fue la mas util
+ 
+   - Material del curso y proyecto base "shapes" de BlueJ (Barnes y Kolling,
+     Objects First with Java).
+   - Documentacion de Java sobre herencia, sobrescritura y excepciones.
