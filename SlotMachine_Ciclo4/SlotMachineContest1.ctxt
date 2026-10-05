@@ -1,0 +1,19 @@
+#BlueJ class context
+comment0.target=SlotMachineContest1
+comment0.text=\r\n\ Marat\u00F3n\ Slot\ Machine\ (ciclo\ 3)\ y\ pruebas\ de\ aceptaci\u00F3n\ del\ proyecto.\r\n\ Las\ pruebas\ de\ aceptaci\u00F3n\ son\ m\u00E9todos\ est\u00E1ticos\:\ corren\ visibles,\ con\r\n\ pausas,\ y\ escriben\ en\ la\ terminal\ lo\ obtenido\ y\ lo\ esperado.\r\n\r\n\ @author\ \ Juan\ Castellanos\ -\ Nicole\ Paez\r\n\ @version\ 2.2\r\n
+comment1.params=n
+comment1.target=int[][]\ solve(int)
+comment1.text=\r\n\ Resuelve\ el\ problema\ Slot\ Machine\ (ciclo\ 3)\ Corre\ de\ forma\ invisible.\r\n\r\n\ @param\ n\ ruedas/s\u00EDmbolos\ de\ la\ m\u00E1quina.\r\n\ @return\ acciones\ {wheel,\ steps}\ que\ llevan\ la\ m\u00E1quina\ al\ jackpot.\r\n
+comment2.params=n
+comment2.target=void\ simulate(int)
+comment2.text=\r\nmetodo\ para\ simular\ el\ problema\ de\ la\ maraton\ en\ modo\ visible\r\n\ @param\ n\ ruedas/s\u00EDmbolos\ de\ la\ m\u00E1quina\ a\ simular.\r\n
+comment3.params=m\ n
+comment3.target=int[][]\ resolver(SlotMachine,\ int)
+comment3.text=\r\n\ Corre\ el\ algoritmo\ completo\ sobre\ una\ m\u00E1quina\ ya\ creada,\ y\r\n\ devuelve\ las\ acciones\ que\ de\ verdad\ se\ aplicaron.\r\n\r\n\ @param\ m\ m\u00E1quina\ ya\ creada\ (invisible\ o\ visible,\ no\ importa).\r\n\ @param\ n\ ruedas/s\u00EDmbolos\ de\ esa\ m\u00E1quina.\r\n\ @return\ la\ secuencia\ de\ acciones\ {wheel,\ steps}\ aplicadas.\r\n\ @throws\ SlotMachineException\ si\ alguna\ operaci\u00F3n\ de\ la\ m\u00E1quina\ falla\r\n
+comment4.params=
+comment4.target=void\ acceptanceTest1()
+comment4.text=\r\n\ Prueba\ de\ aceptaci\u00F3n\ 1\:\ el\ usuario\ arma\ una\ m\u00E1quina\ y\ la\ deja\ en\ jackpot.\r\n\ Ciclo\ 1\:\ crear,\ colocar,\ consultar\ y\ eliminar.\r\n\ Ciclo\ 2\:\ swap,\ lock,\ spin(set)\ y\ spin(pasos).\r\n
+comment5.params=
+comment5.target=void\ acceptanceTest2()
+comment5.text=\r\n\ Prueba\ de\ aceptaci\u00F3n\ 2\:\ tipos\ de\ ruedas\ y\ s\u00EDmbolos\ (ciclo\ 4)\ y\ solver\ (ciclo\ 3).\r\n\ El\ ef\u00EDmero\ y\ el\ t\u00EDmido\ se\ comprueban\ mirando\ la\ pantalla.\r\n
+numComments=6

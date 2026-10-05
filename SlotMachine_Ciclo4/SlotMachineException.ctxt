@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=SlotMachineException
+comment0.text=\r\n\ Excepci\u00F3n\ del\ simulador.\ Centraliza\ todos\ los\ mensajes\ de\ error\r\n\ de\ SlotMachine\ como\ constantes.\r\n\r\n\ @author\ Juan\ Castellanos\ -\ Nicole\ Paez\r\n\ @version\ 1.0\r\n
+comment1.params=message
+comment1.target=SlotMachineException(java.lang.String)
+comment1.text=\r\n\ Crea\ una\ excepci\u00F3n\ con\ el\ mensaje\ dado.\r\n\ @param\ message\ uno\ de\ los\ mensajes\ constantes\ de\ esta\ clase\r\n
+numComments=2
