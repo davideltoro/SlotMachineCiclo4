@@ -1,0 +1,14 @@
+#BlueJ class context
+#Sun Oct 04 19:56:24 COT 2026
+comment0.target=EphemeralSymbol
+comment0.text=\r\n S\u00EDmbolo ef\u00EDmero\: en cada giro de la m\u00E1quina reduce su tama\u00F1o hasta\r\n quedar como un punto. Se dibuja como un tri\u00E1ngulo para distinguirlo.\r\n\r\n @author Juan Castellanos - Nicole Paez\r\n @version 1.0\r\n
+comment1.params=color
+comment1.target=EphemeralSymbol(java.lang.String)
+comment1.text=\r\n Crea un s\u00EDmbolo ef\u00EDmero con el color dado y su tama\u00F1o inicial.\r\n @param color el color del s\u00EDmbolo (nombre CSS, ej. "red")\r\n
+comment2.target=void onSpin()
+comment2.text=\r\n En cada giro reduce su tama\u00F1o en 2, hasta quedar como un punto\r\n de tama\u00F1o 4 (no desaparece).\r\n
+comment3.target=int getSize()
+comment3.text=\r\n @return el tama\u00F1o actual del s\u00EDmbolo\r\n
+comment4.target=java.lang.String getShape()
+comment4.text=\r\n @return "triangle"\: el ef\u00EDmero se dibuja como tri\u00E1ngulo\r\n
+numComments=5

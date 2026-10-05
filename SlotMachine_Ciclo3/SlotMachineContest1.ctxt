@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.target=SlotMachineContest1
+comment0.text=\r\n\ The\ test\ class\ SlotMachineContest1.\r\n\r\n\ @author\ \ Juan\ Castellanos\ -\ Nicole\ Paez\r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=n
+comment1.target=int[][]\ solve(int)
+comment1.text=\r\n\ Resuelve\ el\ problema\ Slot\ Machine\ (ciclo\ 3)\ Corre\ de\ forma\ invisible.\r\n\r\n\ @param\ n\ ruedas/s\u00EDmbolos\ de\ la\ m\u00E1quina.\r\n\ @return\ acciones\ {wheel,\ steps}\ que\ llevan\ la\ m\u00E1quina\ al\ jackpot.\r\n
+comment2.params=n
+comment2.target=void\ simulate(int)
+comment2.text=\r\nmetodo\ para\ simular\ el\ problema\ de\ la\ maraton\ en\ modo\ visible\r\n\ @param\ n\ ruedas/s\u00EDmbolos\ de\ la\ m\u00E1quina\ a\ simular.\r\n
+comment3.params=m\ n
+comment3.target=int[][]\ resolver(SlotMachine,\ int)
+comment3.text=\r\n\ Corre\ el\ algoritmo\ completo\ sobre\ una\ m\u00E1quina\ ya\ creada,\ y\r\n\ devuelve\ las\ acciones\ que\ de\ verdad\ se\ aplicaron.\r\n\r\n\ @param\ m\ m\u00E1quina\ ya\ creada\ (invisible\ o\ visible,\ no\ importa).\r\n\ @param\ n\ ruedas/s\u00EDmbolos\ de\ esa\ m\u00E1quina.\r\n\ @return\ la\ secuencia\ de\ acciones\ {wheel,\ steps}\ aplicadas.\r\n
+numComments=4
